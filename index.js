@@ -57,8 +57,14 @@ const executeTwitterBot = async () => {
   }
 };
 
-const cronTweet = new CronJob("30 * * * * *", async () => {
-  executeTwitterBot();
-});
+const cronTweet = new CronJob(
+  "30 3 * * * *",
+  async () => {
+    executeTwitterBot();
+  },
+  null,
+  true,
+  "Asia/Kolkata"
+);
 
 cronTweet.start();
