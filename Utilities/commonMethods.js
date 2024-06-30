@@ -27,7 +27,7 @@ const tossCoin = () => {
 const tweetQuote = async (quote, author) => {
   try {
     let tweetContent = `"${quote}" - ${author}`;
-    tweetContent += "#motivation #thoughts #morning #thinking #celebrities #quotes";
+    tweetContent += " #motivation #thoughts #morning #thinking #celebrities #quotes";
     console.log("tweeted Content ", tweetContent);
     const { data } = await twitterClient.v2.tweet(tweetContent);
     console.log("Tweeted:", data);
