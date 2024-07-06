@@ -36,21 +36,6 @@ const tweetQuote = async (quote, author) => {
   }
 };
 
-// const uploadImage = async (imagePath, author) => {
-//   try {
-//     const imageData = fs.readFileSync(imagePath);
-//     const mediaId = await twitterClient.v1.uploadMedia(imageData, {
-//       type: "png",
-//     });
-//     const { data } = await twitterClient.v2.tweet(`Image by ${author}`, {
-//       media: { media_ids: [mediaId] },
-//     });
-//     console.log("Image uploaded and tweeted:", data);
-//   } catch (error) {
-//     console.error("Error uploading image:", error);
-//   }
-// };
-
 const generateQuote = async () => {
   try {
     const category = getRandomCategory();
@@ -76,7 +61,6 @@ const generateQuote = async () => {
 module.exports = {
   getRandomCategory,
   tossCoin,
-//   uploadImage,
   tweetQuote,
   generateQuote,
 };
